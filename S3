@@ -55,7 +55,7 @@ S3 Storage Tiers:
 	1) Data are access less frequently, but require rapid access.
 	2) Lower fee than s3 but charged a retrieval fee.
 
-3) S3 One Zone - IA:
+3) S3 One Zone - IA: (RRS - Reduced Redundancy Services)
 	---------------
 	1) Lower cost option for infequently access data.
 	2) do not require multiple availablity zone data resilience.
