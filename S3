@@ -1,0 +1,84 @@
+S3 - Simple Storage Service:
+-----------------------------
+
+1) Object Storage
+2) dataspread across multiple devices
+3) 0-5TB size
+4) files stored in buckets
+5) S3 buckets have universal namespace.
+6) when file upload is success 200 status code received.
+7) Not suitable for installing operating System.
+
+
+Object has the following properties:
+------------------------------------
+
+1) Key - filename
+2) value - data made up of bytes
+3) Version ID - for versioning
+4) MetaData - data about data
+5) Subresources
+	Access Control List
+	Torrents
+
+Data Consistency of S3
+----------------------
+
+1) Read after Write consistency -PUTS of new Object.
+2) Eventual consistency for overwrite PUTS and DELETES.
+
+	other words:
+
+	1) Write a new file can read it immediately.
+	2) Update Existing file or delete file you will not able to see the change immediately.
+
+S3 Features:
+------------
+
+1) Tiered Storage.
+2) Lifecycle management.
+3) Versioning.
+4) Encryption.
+5) MFA Delete.
+6) Secure data using Bucket Policies and Access Control Lists.
+
+S3 Storage Tiers:
+---------------
+
+1) S3 Standard:
+	----------
+	1) 99.99% - Availability
+	2) 99.99999999999% - Durability
+
+2) S3 - IA: (Infrequently Access)
+	-------
+	1) Data are access less frequently, but require rapid access.
+	2) Lower fee than s3 but charged a retrieval fee.
+
+3) S3 One Zone - IA:
+	---------------
+	1) Lower cost option for infequently access data.
+	2) do not require multiple availablity zone data resilience.
+	
+4) S3 - Intelligent Tiering:
+	-----------------------
+	1) Automatically moves data to most cost-efficient access tier without performance impact.
+	
+5) S3 Glacier: (Data archiving)
+	---------
+	1) Secure,durable, low cost storage class for data archiving.
+	2) Retrieval time configurable from minutes to hours.
+	
+6) S3 Glacier Deep Archive:
+	----------------------
+	1) Lowest cost storage
+	2) Retrieval time from 12 hours.
+	
+S3 Billing:
+----------
+1) Storage.
+2) Requests.
+3) Storage Management Pricing.(Tier based)
+4) Data Transfer pricing.
+5) Transfer Acceleration.
+6) Cross Region Replication Pricing.
