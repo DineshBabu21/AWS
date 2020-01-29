@@ -1,0 +1,12 @@
+Lambda:
+------
+Lambda is the ulimateAbstraction layer.
+
+1. AWS Lambda is a compute service where you upload coad and create a Lambda function.
+2. Lambda takes care of provisioning and managing the servers that we use to run the code.
+3. No need to worry about scaling, patching,operating systems etc.
+
+Can be used in following ways:
+1) Event-driven (Changes to data in S3 Bucket or DynamoDB table)
+2) API-Driven 
+================================================================================================================
