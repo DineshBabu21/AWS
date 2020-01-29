@@ -1,0 +1,50 @@
+Virtual Private Cloud:
+---------------------
+
+Key Components to touch
+  1) Subnet
+  2) Route Tables
+  3) Internet gateway
+  4) Network ACL
+  5) Security Groups
+
+When creating a new VPC by default the foloowing components will be created
+  1) Route tables
+  2) Network ACL
+  3) Security Groups
+
+
+=========================================================================================================================
+
+Network ACL (NACL)
+-----------
+Default NACL created with the VPC creation allows all inbound and outboud rules.
+1. Set Inboud and Outboud Rules
+2. Stateless (i.e) if inboud rule is added corresponding outboud rule need to be added.
+3. Can add rules which can be used to allow or deny for particular IP.
+4. Rule Number are added with increment of 100 as per amazon recomendation(i.e) Rule #100 should be followed by Rule #200.
+5. By Default all the Inboud and Outboud Rules are Denied for custom NACL. 
+6. Rules are validated in numerical order hence all the deny rules should be prioritized before the allow rules.
+7. every Subnets can be associated to only one NACL at a time.
+8. NACL are validated before a security Group.
+
+Creating a NACL:
+----------------
+NameTag -> Select VPC -> Create
+
+============================================================================================================================
+
+VPC FlowLogs:
+------------
+1. Used to capture IP traffic going in and fromnetwork interfaces in VPC.
+2. Data are strored in Amazon cloudwatch logs.
+3. Created at 3 levels: VPC, Subnet and Network Interface
+4.You cannot tag a flowlog.
+5. Cannot change IAM role after creating a flowlog.
+
+Create a Flow Log:
+-----------------
+Services -> VPC -> Your VPC-> select VPC -> Action -> Create Flowlog
+
+============================================================================================================================
+
